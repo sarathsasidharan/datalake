@@ -4,6 +4,7 @@ DATA_LAKE_RG='datalake-template'
 DATA_LAKE_LOCATION='westeurope'
 DATA_LAKE_STORAGE='datalakestorage'
 DATA_LAKE_WORKFLOW='datalakeorchestrator'
+DATA_LAKE_WORKFLOW_DB='datalakeprepengine'
 
 ARM_LOCATION='arm/data_factory.json'
 ARM_PROPS_LOCATION='../conf/data_factory_prop.json'
@@ -12,6 +13,9 @@ DATA_LAKE_SERVER_NAME='datalakerelationaldb'
 ADMIN_USERNAME='sasasid'
 ADMIN_PASSWD='Bigdata@123'
 DATA_LAKE_DATABASE_NAME='datalakerelational'
+
+ARM_LOCATION_DB='arm/databricks.json'
+ARM_PROPS_LOCATION_DB='../conf/databricks_prop.json'
 
 # Create Resource Group
 az group create \
@@ -57,3 +61,10 @@ az sql server firewall-rule create \
  -n AllowYourIp \
  --start-ip-address 0.0.0.0 \
  --end-ip-address 0.0.0.0
+
+  # Create Azure Databricks 
+az group deployment create \
+	--name $DATA_LAKE_WORKFLOW_DB \
+        --resource-group $DATA_LAKE_RG \
+	--template-file $ARM_LOCATION_DB \
+	--parameters $ARM_PROPS_LOCATION_DB
