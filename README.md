@@ -1,2 +1,0 @@
-# datalake
-Data Lake template
