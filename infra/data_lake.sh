@@ -5,7 +5,7 @@ DATA_LAKE_LOCATION='westeurope'
 DATA_LAKE_STORAGE='datalakestorage'
 DATA_LAKE_WORKFLOW='dataorchestrator'
 
-ARM_LOCATION='arm/datafactory.json'
+ARM_LOCATION='arm/data_factory.json'
 ARM_PROPS_LOCATION='../conf/data_factory_prop.json'
 
 # Create Resource Group
