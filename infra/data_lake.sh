@@ -73,6 +73,7 @@ az group deployment create \
 
 
 # Create a SQL Datawarehouse
-az sql dw create --name $DATA_LAKE_DWH_NAME \ 
+az sql dw create \
  --resource-group $DATA_LAKE_RG \
- --server $DATA_LAKE_SERVER_NAME
+ --server $DATA_LAKE_SERVER_NAME \
+ --name $DATA_LAKE_DWH_NAME 
