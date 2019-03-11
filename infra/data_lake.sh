@@ -22,6 +22,6 @@ az storage account create \
  # Create Data Factory Version 2 
 az group deployment create \
 	--name $DATA_LAKE_WORKFLOW \
-    --resource-group $DATA_LAKE_RG \
+        --resource-group $DATA_LAKE_RG \
 	--template-file $TEMPLATE_FILE_PATH \
 	--parameters $PARAMETERS_FILE_PATH
