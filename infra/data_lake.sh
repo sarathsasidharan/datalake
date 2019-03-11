@@ -5,6 +5,9 @@ DATA_LAKE_LOCATION='westeurope'
 DATA_LAKE_STORAGE='datalakestorage'
 DATA_LAKE_WORKFLOW='dataorchestrator'
 
+ARM_LOCATION='arm/datafactory.json'
+ARM_PROPS_LOCATION='../conf/data_factory_prop.json'
+
 # Create Resource Group
 az group create \
     --name $DATA_LAKE_RG \
@@ -23,5 +26,5 @@ az storage account create \
 az group deployment create \
 	--name $DATA_LAKE_WORKFLOW \
         --resource-group $DATA_LAKE_RG \
-	--template-file $TEMPLATE_FILE_PATH \
-	--parameters $PARAMETERS_FILE_PATH
+	--template-file $ARM_LOCATION \
+	--parameters $ARM_PROPS_LOCATION
