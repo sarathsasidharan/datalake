@@ -11,8 +11,8 @@ ARM_LOCATION='arm/data_factory.json'
 ARM_PROPS_LOCATION='../conf/data_factory_prop.json'
 
 DATA_LAKE_SERVER_NAME='datalakerelationaldb'
-ADMIN_USERNAME='sasasid'
-ADMIN_PASSWD='Bigdata@123'
+ADMIN_USERNAME='<ENTER_USERNAME>'
+ADMIN_PASSWD='<ENTER_PASSWORD>'
 DATA_LAKE_DATABASE_NAME='datalakerelational'
 DATA_LAKE_DWH_NAME='datalakedwh'
 
