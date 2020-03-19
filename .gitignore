@@ -1,2 +1,2 @@
-src/main/sql/datamodel
+src/main/sql/datamodel/*.sql
 sqltools*
